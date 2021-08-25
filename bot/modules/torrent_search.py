@@ -304,14 +304,14 @@ RESULT_STR_ALL = (
 )
 
 torrents_dict = {
-    '1337x': {'source': "https://slam-api.herokuapp.com/api/1337x/", 'result_str': RESULT_STR_1337},
-    'piratebay': {'source': "https://slam-api.herokuapp.com/api/piratebay/", 'result_str': RESULT_STR_PIRATEBAY},
-    'tgx': {'source': "https://slam-api.herokuapp.com/api/tgx/", 'result_str': RESULT_STR_TGX},
-    'yts': {'source': "https://slam-api.herokuapp.com/api/yts/", 'result_str': RESULT_STR_YTS},
-    'eztv': {'source': "https://slam-api.herokuapp.com/api/eztv/", 'result_str': RESULT_STR_EZTV},
-    'torlock': {'source': "https://slam-api.herokuapp.com/api/torlock/", 'result_str': RESULT_STR_TORLOCK},
-    'rarbg': {'source': "https://slam-api.herokuapp.com/api/rarbg/", 'result_str': RESULT_STR_RARBG},
-    'ts': {'source': "https://slam-api.herokuapp.com/api/all/", 'result_str': RESULT_STR_ALL}
+    '1337x': {'source': "https://torrents--api.herokuapp.com/api/1337x/", 'result_str': RESULT_STR_1337},
+    'piratebay': {'source': "https://torrents--api.herokuapp.com/api/piratebay/", 'result_str': RESULT_STR_PIRATEBAY},
+    'tgx': {'source': "https://torrents--api.herokuapp.com/api/tgx/", 'result_str': RESULT_STR_TGX},
+    'yts': {'source': "https://torrents--api.herokuapp.com/api/yts/", 'result_str': RESULT_STR_YTS},
+    'eztv': {'source': "https://torrents--api.herokuapp.com/api/eztv/", 'result_str': RESULT_STR_EZTV},
+    'torlock': {'source': "https://torrents--api.herokuapp.com/api/torlock/", 'result_str': RESULT_STR_TORLOCK},
+    'rarbg': {'source': "https://torrents--api.herokuapp.com/api/rarbg/", 'result_str': RESULT_STR_RARBG},
+    'ts': {'source': "https://torrents--api.herokuapp.com/api/all/", 'result_str': RESULT_STR_ALL}
 }
 
 torrent_handlers = []
@@ -320,16 +320,17 @@ for command, value in torrents_dict.items():
 
 def searchhelp(update, context):
     help_string = '''
-• <code>/nyaasi</code> <i>[search query]</i>
-• <code>/sukebei</code> <i>[search query]</i>
-• <code>/1337x</code> <i>[search query]</i>
-• <code>/piratebay</code> <i>[search query]</i>
-• <code>/tgx</code> <i>[search query]</i>
-• <code>/yts</code> <i>[search query]</i>
-• <code>/eztv</code> <i>[search query]</i>
-• <code>/torlock</code> <i>[search query]</i>
-• <code>/rarbg</code> <i>[search query]</i>
-• <code>/ts</code> <i>[search query]</i>
+<b>Torrent Search</b>
+• /nyaasi <i>[search query]</i>
+• /sukebei <i>[search query]</i>
+• /1337x <i>[search query]</i>
+• /piratebay <i>[search query]</i>
+• /tgx <i>[search query]</i>
+• /yts <i>[search query]</i>
+• /eztv <i>[search query]</i>
+• /torlock <i>[search query]</i>
+• /rarbg <i>[search query]</i>
+• /ts <i>[search query]</i>
 '''
     sendMessage(help_string, context.bot, update)
     
